@@ -1,0 +1,23 @@
+{
+  "name": "clihangman",
+  "version": "1.0.0",
+  "description": "cli hangman game with a comedy theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmmiv/cliHangman.git"
+  },
+  "author": "PM Milam IV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmmiv/cliHangman/issues"
+  },
+  "homepage": "https://github.com/pmmiv/cliHangman#readme",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "inquirer": "^5.1.0"
+  }
+}

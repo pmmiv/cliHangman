@@ -17,18 +17,20 @@ var Word = function (b){
 	this.check = function (j) {
 		this.inProg = [];
 		for (i=0;i<this.objArray.length;i++) {
-			//need to define guess earlier
 			this.objArray[i].update(j);
 			this.inProg.push(this.objArray[i].hideShow());
+			console.log(this.inProg);
 		}
 	};
 }
 
-var test = new Word("testing");
-test.create();
-test.check(process.argv[2]);
-console.log(test.inProg);
-test.check(process.argv[3]);
-console.log(test.inProg);
-test.check(process.argv[4]);
-console.log(test.inProg);
+// var test = new Word("testing");
+// test.create();
+// test.check(process.argv[2]);
+// console.log(test.inProg);
+// test.check(process.argv[3]);
+// console.log(test.inProg);
+// test.check(process.argv[4]);
+// console.log(test.inProg);
+
+module.exports = Word;
