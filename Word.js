@@ -4,6 +4,7 @@ var Letter = require('./Letter.js');
 var Word = function (b){
 	// each letter of the word is in this array (wet version)
 	this.word = b.split('');
+	this.wordJoined = b;
 	//each letter obj is in this array
 	this.objArray = [];
 	//the word inProgress is in this array (this will be printed to the console)
@@ -19,18 +20,12 @@ var Word = function (b){
 		for (i=0;i<this.objArray.length;i++) {
 			this.objArray[i].update(j);
 			this.inProg.push(this.objArray[i].hideShow());
-			console.log(this.inProg);
 		}
 	};
+	this.print = function () {
+		var print = this.inProg.join(' ');
+		console.log("\r\n"+print.toUpperCase());
+	}
 }
-
-// var test = new Word("testing");
-// test.create();
-// test.check(process.argv[2]);
-// console.log(test.inProg);
-// test.check(process.argv[3]);
-// console.log(test.inProg);
-// test.check(process.argv[4]);
-// console.log(test.inProg);
 
 module.exports = Word;

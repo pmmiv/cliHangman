@@ -10,17 +10,9 @@ var Letter = function (letter){
 	};
 	this.update = function (guess) {
 		if (guess == this.character) {
-			console.log("Correct!")
 			this.guessed = true;
 		}
 	}
 };
-
-
-//******TEST ZONE*********
-// var chips = process.argv[2];
-// var test = new Letter("w");
-// console.log(test);
-// console.log(test.hideShow(chips));
 
 module.exports = Letter;
