@@ -41,7 +41,7 @@ function game () {
 		wordInPlay.check(" ");
 		guessing();
 		function guessing () {
-			if (wordInPlay.inProg.includes("_") && lives<0) {
+			if (wordInPlay.inProg.includes("_") && lives>0) {
 				wordInPlay.print();
 				inquirer.prompt({
 					name: "letterGuess",
@@ -70,7 +70,7 @@ function game () {
 						guessing();
 					}
 				})
-			} else if (lives<0) {
+			} else if (lives>0) {
 				console.log("\r\nNice work! You got "+wordInPlay.wordJoined+". On to the next one!")
 				game();
 			} else {
